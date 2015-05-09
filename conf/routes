@@ -4,7 +4,10 @@
 
 
 # Home page
-GET        /                                 controllers.Application.index()
+GET        /               controllers.Application.index()
+GET        /results        controllers.Application.result()
+POST       /               controllers.Application.newCall()
 
 # Map the JS resource paths
-GET        /*file                            controllers.Assets.versioned(path="/public", file: Asset)
+GET        /*file          controllers.Assets.versioned(path="/public", file: Asset)
+
