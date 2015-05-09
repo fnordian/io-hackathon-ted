@@ -5,7 +5,7 @@
 
 # Home page
 GET        /               controllers.Application.index()
-GET        /results        controllers.Application.result()
+GET        /results        controllers.Application.results()
 POST       /               controllers.Application.newCall()
 
 # Map the JS resource paths

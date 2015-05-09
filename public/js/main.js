@@ -28,9 +28,11 @@ require(['angular', './controllers', './directives', './filters', './services', 
 
     // Declare app level module which depends on filters, and services
 
-    angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ngRoute']).controller('resultsCtrl', ['$scope', function($scope) {
-                        $scope.resultA = 14;
-            }]);
+    var ted = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ngRoute', 'ngResource']);
+    ted.config(['$resourceProvider', function($resourceProvider){}]);
+    ted.controller('resultsCtrl', ['$scope', '$resource', function($scope, $resource) {
+         $scope.resultA = $resource('/results').get();
+    }]);
 
     angular.bootstrap(document, ['myApp']);
 
