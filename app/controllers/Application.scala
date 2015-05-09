@@ -36,6 +36,6 @@ object Application extends Controller {
 
       counter.put(newCallData.to, counter.getOrElse(newCallData.to, 0) + 1)
 
-      Ok("")
+      Ok("<?xml version='1.0' encoding='UTF-8'?><Response><Play><Url>http://cf4ab77c.ngrok.io/img/tedio-ansage.wav</Url></Play></Response>")
   }
 }
