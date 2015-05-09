@@ -35,10 +35,18 @@ require(['angular', './controllers', './directives', './filters', './services', 
 
     var ted = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ngRoute', 'ngResource', 'chart.js']);
     ted.config(['$resourceProvider', function($resourceProvider){}]);
-    ted.controller('resultsCtrl', ['$scope', '$resource', function($scope, $resource) {
-        
-        $scope.result = $resource('/results').get();
+    ted.controller('resultsCtrl', ['$scope', '$resource', '$interval', function($scope, $resource, $interval) {
+
+        var resource =  $resource('/results')
+
+      $scope.result = {};
+
+        $scope.result = resource.get();
         $scope.labels = ["option1", "option2"];
+
+        $interval(function () {
+          $scope.result = resource.get();
+        }, 1000);
         
         
     }]);
