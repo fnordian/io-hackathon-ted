@@ -5,12 +5,14 @@
   <title>sipgate TeDIO</title>
   <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("img/favicon.png")">
   <link rel="stylesheet" href="@routes.Assets.versioned("css/app.css")">
+  <link rel="stylesheet" href="lib/angular-chart.js/angular-chart.css">
   <script data-main="@routes.Assets.versioned("js/main.js")" src="@routes.Assets.versioned("lib/requirejs/require.js")"></script>
 </head>
 <body ng-controller='resultsCtrl'>
 sipgate TeDIO
 
-Result A: {{ result }}
-
+Result A: {{ result.ted[0] }}
+<canvas id="bar" class="chart chart-bar" data="result.ted"
+  labels="labels"></canvas>
 </body>
 </html>

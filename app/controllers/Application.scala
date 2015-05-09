@@ -9,8 +9,8 @@ object Application extends Controller {
     Ok(views.html.Index())
   }
 
-  def result() = Action {
-    Ok("{ \"ted\" : [ 23, 5 ] } ")
+  def results() = Action {
+    Ok("{ \"ted\" : [ [ 23, 5 ] ] } ")
   }
 
   def newCall() = Action {
