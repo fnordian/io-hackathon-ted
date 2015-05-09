@@ -42,10 +42,19 @@ require(['angular', './controllers', './directives', './filters', './services', 
       $scope.result = {};
 
         $scope.result = resource.get();
-        $scope.labels = ["option1", "option2"];
+        $scope.labels = ["TeD.io (01579-2341043)", "VSecretary (01579-2335891)"];
+        $scope.fillColors = ["rgba(220,220,220,0.5)", "rgba(100,200,120,0.5)"];
+
 
         $interval(function () {
-          $scope.result = resource.get();
+          $scope.result = {"ted" : [[10,25]],
+              "colours": [{
+    fillColor: 'rgba(47, 0, 71, 0.8)',
+    strokeColor: 'rgba(47, 0, 71, 0.8)',
+    highlightFill: 'rgba(47, 0, 71, 0.8)',
+    highlightStroke: 'rgba(47, 0, 71, 0.8)'
+}]
+          };//resource.get();
         }, 1000);
         
         

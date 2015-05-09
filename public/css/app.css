@@ -28,3 +28,30 @@
   content: "";
   padding: 0;
 }
+
+/* Custom */ 
+
+body {
+    font-family: 'Verdana', 'Helvetica', 'Arial';
+    font-size: 20px;
+    color: #555;
+}
+
+.container {
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    text-align: center;
+}
+
+.results-chart {
+    margin-left: -20px;
+    margin-top: 20px;
+    width: 800px;
+}
